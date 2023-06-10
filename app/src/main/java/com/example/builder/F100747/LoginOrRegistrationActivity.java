@@ -1,5 +1,6 @@
 package com.example.builder.F100747;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginOrRegistrationActivity extends AppCompatActivity {
 
+    public static Activity logRegAct;
     EditText username, password, rePassword;
     Button signup, signin;
     DBHelper DB;
@@ -19,6 +21,8 @@ public class LoginOrRegistrationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        logRegAct = this;
+
         setContentView(R.layout.activity_login_or_registration);
         username =  findViewById(R.id.username);
         password =  findViewById(R.id.password);
@@ -26,6 +30,7 @@ public class LoginOrRegistrationActivity extends AppCompatActivity {
         signup =  findViewById(R.id.btnsignup);
         signin =  findViewById(R.id.btnsignin);
         DB = new DBHelper(this);
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Sign in successful.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
+                        LoginOrRegistrationActivity.logRegAct.finish();
                         finish();
                     }
                     else {

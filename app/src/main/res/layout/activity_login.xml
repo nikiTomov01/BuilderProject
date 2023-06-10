@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoHeaderLogin"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/temp_logo_big"/>
+
+    <EditText
+        android:id="@+id/usernameLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User Name"
+        android:layout_marginBottom="25dp"
+        android:layout_below="@+id/logoHeaderLogin"/>
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="25dp"
+        android:layout_below="@+id/usernameLogin"/>
+
+    <Button
+        android:id="@+id/btnsigninLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@+id/passwordLogin"/>
+
+</RelativeLayout>
